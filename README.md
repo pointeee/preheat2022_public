@@ -4,7 +4,7 @@ In this repository there are the key codes and modules for producing the results
 
 The code implement following functions:
 
-1. A general framework to set up a coordinate system. the convertion between (RA, Dec, Redshift) in the celestial coordinates system and (x, y, z) in a comoving system.
+1. [A general framework](./field_util.py) to set up a coordinate system. the convertion between (RA, Dec, Redshift) in the celestial coordinates system and (x, y, z) in a comoving system.
 2. Manipulating the fields with Python code. Equip raw field arrays with coordinates, clip these fields by specifying the coordinates, extract the values inside a sphere, etc.
 3. Dealing with dark matter simulation outputs. "Paint" the particle data as fields, and full procedure to apply FGPA.
 4. Running mock Wiener Filter like CLAMATO. Prepering the data,
