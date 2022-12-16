@@ -12,8 +12,8 @@ The code implement following functions:
 6. [ ] Plots & visualization
     - [ ] Transmission-density relation shown with 2d histogram
     - [ ] Pixel data shown with 1d histrogram
-    - [ ] Sliceplot for sanity check / visual inspect
-    - [ ] Histrograms which illustrate the preheating signal
+    - [X] [Sliceplot](./sliceplot_mockrec.iipynb) for sanity check / visual inspect
+    - [X] [Histrograms](./preheat_detection) which illustrate the preheating signal
     - [ ] A field visualization based on open3d (native, powerful but many wheels to be invented)
     - [ ] A field visualization based on x3dom.js (beautiful, supported by aas journals, but not optimal if you are not familar with front-end stuff.)
 7. [X] [A void prober](./VoidProber.py) and [an overdensity prober](ProtoClusterProber.py), which serve as the by-products of some literature review.
