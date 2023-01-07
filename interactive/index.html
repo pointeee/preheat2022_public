@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>COSTCO-I members in CLAMATO</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />    
+    <script type="text/javascript" src="x3dom.js"></script>    
+    <link rel="stylesheet" type="text/css" href="x3dom.css" />    
+    <style>
+    x3d { 
+            border: 2px solid blue;
+            margin: 10px;
+            width: 600px;
+            height: 400px;
+            display: block;
+            float: none;
+    }
+    </style>
+    
+    <script>
+                
+        function loadData() {
+            var sc = document.getElementById("mymap");
+            sc.setAttribute("load", "true");
+        }
+        
+        function newView(o) {            
+            var obs = document.getElementById("IGM__obs");
+            obs.setAttribute("position", o.getAttribute("position"));
+            obs.setAttribute("orientation", o.getAttribute("orientation"));
+            obs.setAttribute("centerOfRotation", o.getAttribute("centerOfRotation"));
+        }
+
+        function reset() {
+            var o = document.getElementById("IGM__obso");
+            newView(o)
+        }
+
+        function DE_view() {
+            var o = document.getElementById("IGM__obsx");
+            newView(o)
+        }
+
+        function RA_view() {
+            var o = document.getElementById("IGM__obsy");
+            newView(o)
+        }
+
+        function red_view() {
+            var o = document.getElementById("IGM__obsz");
+            newView(o)
+        }
+
+        x3dom.runtime.ready = function() {
+            console.log("ready");
+            //resetView();
+        }
+    </script>
+</head>
+
+<body>
+    
+    
+    <!-- Content -->
+    <section>
+        <x3d>
+        <scene>
+            <background backUrl="./background.png"></background>
+            <inline id="mymap" url="cont3d_cont.x3d" nameSpaceName="IGM" mapDEFToID="true" onclick="" load="true"></inline>
+        </scene>
+        </x3d>
+        
+      <div id="tools">
+            <!-- <button style="width:300px;" onclick="loadData()">Load data</button> -->
+        <button style="width:150px;" onclick="reset()">Reset View</button>
+        <button style="width:150px;" onclick="RA_view()">Along RA</button>
+        <button style="width:150px;" onclick="DE_view()">Along Dec</button>
+        <button style="width:150px;" onclick="red_view()">Along redshift</button>
+
+      </div>
+    </section>
+
+
+</body>
+</html>
