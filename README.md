@@ -9,9 +9,9 @@ The code implement following functions:
 3. [X] [Dealing with dark matter simulation outputs](./FGPA.py). "Paint" the particle data as fields, and [full procedure](./handle_dm_sim.ipynb) to apply FGPA.
 4. [X] Running mock Wiener Filter like CLAMATO. [Prepering the data](./wiener_filter_input.ipynb), [feeding it to dachshund](./wiener_filter_mock.ipynb).
 5. [X] [LSS stuff](./identify_pc_member.ipynb): idenfitying protocluster members, calculating Virial mass, and further follow up with Colossus.
-6. [ ] Plots & visualization
-    - [ ] Transmission-density relation shown with 2d histogram
-    - [ ] Pixel data shown with 1d histrogram
+6. [X] Plots & visualization
+    - [X] [Transmission-density relation](./hist2d_plots.ipynb) shown with 2d histogram
+    - [X] [Pixel data](./hist1d_plots.ipynb) shown with 1d histrogram
     - [X] [Sliceplot](./sliceplot_mockrec.ipynb) for sanity check / visual inspect
     - [X] [Histrograms](./preheat_detection) which illustrate the preheating signal
     - [X] [A field visualization](./vis_util_o3d.py) based on open3d (native, powerful but many wheels to be invented)
